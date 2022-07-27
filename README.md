@@ -1,10 +1,18 @@
 # participatory-mapping
 testing participatory mapping with Google Forms and Leaflet
 
+## Goal
+Create or adapt an existing light-weight Leaflet map code for participatory mapping data collection. Users click and place icons on the map (e.g. places where they currently like to exercise), and when submitting their responses, results for each type of marker are saved with lat/lng and timestamp in a Google Sheet or CSV file, to be displayed later as a heatmap.
+
+## Credits
+Adapted from https://github.com/HarryatBigWater/harryatbigwater/tree/master/participatory_mapping_planning (unlicensed), who adapted it from https://aogdp.github.io/gpsform/ (unlicensed), with these [OLD instructions from aogdp](https://github.com/aogdp/gpsform/blob/gh-pages/README.md)
+
+## Big issues
+- `map_survey.html` code from original author seems to have hard-coded responses rather than collecting actual user data
+- `display.html` code seems to rely on Google Sheets v3, no longer functional, and unclear if v4 allows data storage in same way
+
 ## testing demo
 https://jackdougherty.github.io/participatory-mapping/
-
-**ISSUE: this demo code seems to have hard-coded responses rather than collecting user data**
 
 Google Form public view
 https://docs.google.com/forms/d/e/1FAIpQLSfgy2P7FZNbFn1_DdTN6j7UuTyT_F_RgKS4u0-wFeS2fstj3g/viewform
@@ -18,10 +26,7 @@ https://docs.google.com/spreadsheets/d/1D6skRCvkF4DNIAlbpGhbLxCF5rSAH4U9GV_32Twx
 Published Google Sheet of responses
 https://docs.google.com/spreadsheets/d/e/2PACX-1vT-BkdLXpNn6-VA4wzs5bvUvEfFl8P-sUfN5-5Lf8NV4blrEYbWQN-Sci8Ov52XHepy6x6QBNwyW4NG/pubhtml
 
-## Credits
-Adapted from https://github.com/HarryatBigWater/harryatbigwater/tree/master/participatory_mapping_planning (unlicensed), who adapted it from https://aogdp.github.io/gpsform/ (unlicensed), with these [OLD instructions from aogdp](https://github.com/aogdp/gpsform/blob/gh-pages/README.md)
-
-## Instructions-in-progress
+## New Instructions in-progress
 1. Fork a copy of the code from GitHub
 2. Open the original Google Form, and make a copy to your Google Drive. The original contains short-answer questions for: ip address, markerA, markerB, markerC. *Unclear if IP address is appropriate to collect, and format of other variables*
 3. In your new Google Form > Responses, create a new linked Google Sheet in your Google Drive to collect responses
@@ -47,13 +52,12 @@ In the code repo, open `map_survey.html` and change these variables to match you
 ```
 *Also see Google formResponse ID hardcoded around line 364*
 
+In the code repo, open `display.html` and make edits to display results. *This is not working, perhaps due to Google Sheets v3?*
+
 Host your updated code on the web using GitHub Pages or your own webserver.
 
-##Enhancements
-Could be added but I wanted to keep this app as simple as possible.
-
-1. Add styling using Awesome Markers, Maki Markers or other plugins.
-2. Add search.
-3. More basemaps.
-5. Layer selector.
-6. Figure out a way to collect pictures taken with the device, and push that url to the google sheet. This would take much more coding than is in the initial app. I suggest this be accomplished manually.
+## TODO
+- change basemap
+- add search
+- add current user location
+- show layers of existing bike lanes, etc.
