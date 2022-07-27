@@ -2,10 +2,10 @@
 testing participatory mapping with Google Forms and Leaflet
 
 ## Goal
-Create or adapt an existing light-weight Leaflet map code for participatory mapping data collection. Users click and place icons on the map (e.g. places where they currently like to exercise), and when submitting their responses, results for each type of marker are saved with lat/lng and timestamp in a Google Sheet or CSV file, to be displayed later as a heatmap.
+Create or adapt an existing light-weight Leaflet map code for participatory mapping data collection and subsequent display of results for all submissions. Users click and place icons on the map (e.g. places where they currently like to exercise), and when submitting their responses, results for each type of marker are saved with lat/lng and timestamp in a Google Sheet or CSV file, to be displayed later as a heatmap.
 
 ## Credits
-Adapted from https://github.com/HarryatBigWater/harryatbigwater/tree/master/participatory_mapping_planning (unlicensed), who adapted it from https://aogdp.github.io/gpsform/ (unlicensed), with these [OLD instructions from aogdp](https://github.com/aogdp/gpsform/blob/gh-pages/README.md)
+Adapted from https://github.com/HarryatBigWater/harryatbigwater/tree/master/participatory_mapping_planning (unlicensed), who also displays this code on his consulting web page: https://www.bigwaterconsulting.net/participatory-mapping. He adapted it from https://aogdp.github.io/gpsform/ (unlicensed), which uses pop-up forms for textual descriptions, not icons, and see also these [OLD instructions from aogdp](https://github.com/aogdp/gpsform/blob/gh-pages/README.md)
 
 ## Big issues
 - `map_survey.html` code from original author seems to have hard-coded responses rather than collecting actual user data
