@@ -38,7 +38,7 @@
       top: 66px;
       right:20px;
       background-color:white;
-       padding: 6px 8px; font: 14px/16px "open sans", Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.9); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; 
+       padding: 6px 8px; font: 14px/16px "open sans", Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.9); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px;
     }
     .btn{
       /*color: #486382 !important;*/
@@ -79,7 +79,7 @@
   }
   #theX{
       cursor:pointer;
-      position:absolute; 
+      position:absolute;
       top:0px;
       right:10px;
   }
@@ -160,21 +160,21 @@
   <script>
     var map = L.map('map'); //Initialize the map
 
-    var formId = '1jKikvo13Z3snKzU1FRNAq5x0sZ3erPqzPdcAHtC9mgI';
+    var formId = '1FAIpQLSfgy2P7FZNbFn1_DdTN6j7UuTyT_F_RgKS4u0-wFeS2fstj3g';
     var formIp = '1187308881';
     var formAMarkers = '1594844786';
     var formBMarkers = '552211557';
     var formCMarkers = '538960565';
 
-    // var gsheet = '1v8xW8RbyB4qSlHq2IkTOGIEy0Lo4dVtST4FIyqty9FA';
+    // OLD var gsheet = '1v8xW8RbyB4qSlHq2IkTOGIEy0Lo4dVtST4FIyqty9FA';
 
     //Add a basemap
     var OpenStreetMap_Mapnik = L.tileLayer('https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
     	minZoom: 16,
       maxZoom: 19,
-    	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; <a href="https://carto.com/attribution">CARTO</a> | <a href="https://www.iconfinder.com/">Icons</a> | Created by <a href ="http://bigwaterconsulting.net/" target ="_blank">Big Water Consulting</a>'
+    	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; <a href="https://carto.com/attribution">CARTO</a> | <a href="https://www.iconfinder.com/">Icons</a>'
     }).addTo(map);
-    map.setView([47.667031, -122.384448], 16);
+    map.setView([41.7656, -72.7162], 16);
 
     var marker, lat, lng; //create variables used throughout the map
 
@@ -201,7 +201,7 @@
       setmarker_color(current_marker_type)
     }
 
-    // Custom map markers 
+    // Custom map markers
     var exercise = L.icon({
       name: 'exercise',
       iconUrl: 'icons/exercise.png',
@@ -305,24 +305,24 @@
         // console.log("type:\n")
         // console.log(map._layers[current_marker].options.type_of_marker)
         if (map._layers[current_marker].options.type_of_marker == "one"){
-          one += map._layers[current_marker]._latlng.lat 
+          one += map._layers[current_marker]._latlng.lat
           one += ", "
           one += map._layers[current_marker]._latlng.lng
           one += "; "
         } else if (map._layers[current_marker].options.type_of_marker == "two"){
-          two += map._layers[current_marker]._latlng.lat 
+          two += map._layers[current_marker]._latlng.lat
           two += ", "
           two += map._layers[current_marker]._latlng.lng
           two += "; "
         } else if (map._layers[current_marker].options.type_of_marker == "three"){
-          three += map._layers[current_marker]._latlng.lat 
+          three += map._layers[current_marker]._latlng.lat
           three += ", "
           three += map._layers[current_marker]._latlng.lng
           three += "; "
         } else{
           console.log("No choices selected. Bummer.")
         }
-      } 
+      }
       // console.log("one", one)
       // console.log("two", two)
       // console.log("three", three)
@@ -355,13 +355,13 @@
         $("#three").css({'border': '3px solid #28a745'});
       }
     };
-    // Close instructions 
+    // Close instructions
     $(".theX").click(function(){
       $("#instructions").hide();
     });
   </script>
 <!-- The below form is hidden and located behind the map. It gets filled in when the map's submit button is pushed -->
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSc1sSM9zjMrXuFioSbgr0WNYqUcWeeeQ7B7cS-SWi11DjtUcQ/formResponse" id = "googleformform">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSfgy2P7FZNbFn1_DdTN6j7UuTyT_F_RgKS4u0-wFeS2fstj3g/formResponse" id = "googleformform">
 <label for="a">Number ip address/short answer</label>
 <textarea name="entry.1187308881" id="ipaddr"/></textarea>
 
